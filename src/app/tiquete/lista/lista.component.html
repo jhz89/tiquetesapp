@@ -1,0 +1,23 @@
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Codigo</th>
+        <th>Viajero</th>
+        <th>Fecha Reserva</th>
+        <th>Ruta</th>
+        <th>Fecha Compra</th>        
+        <th>Usuario</th>        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let tiquete of TiqueteService.tiqueteList">
+          <td>{{tiquete.idtiquete}}</td>
+          <td>{{tiquete.idviajero.nombre}} {{tiquete.idviajero.apellido}}</td>
+          <td>{{tiquete.fechareserva}}</td>
+          <td>{{tiquete.idruta.origen}} - {{tiquete.idruta.destino}}</td>
+          <td>{{tiquete.fechaCompra}}</td>
+          <td>{{tiquete.idUsuario.nombreUsuario}}</td>    
+      </tr>    
+    </tbody>
+  </table>

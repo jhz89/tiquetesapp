@@ -1,0 +1,55 @@
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Crear Ruta
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Agregar Ruta</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form #addForm="ngForm">
+            <div class="form-group">
+              <label for="destino">Destino:</label>
+              <input type="text" class="form-control" id="destino" placeholder = "Destino" required [(ngModel)]="ruta.destino" name="destino" #destino="ngModel">
+            </div>
+            <div class="form-group">                                
+              <label for="fechasalida">Fecha Salida:</label>
+              <input type="datetime" class="form-control" id='fechasalida' placeholder = "Fecha Salida" required [(ngModel)]="ruta.fechasalida" name="fechasalida" #fechasalida="ngModel">
+            </div>
+            <div class="form-group">
+                <label for="placa">Placa Vehiculo:</label>
+                <input type="text" class="form-control" id="placa" placeholder = "Placa Vehiculo" required [(ngModel)]="ruta.placavehiculo" name="placavehiculo" #placavehiculo="ngModel">
+            </div>
+            <div class="form-group">
+                  <label for="valor">Valor:</label>
+                  <input type="text" class="form-control" id="valor" placeholder = "Valor" required [(ngModel)]="ruta.valor" name="valor" #valor="ngModel">
+            </div>
+            <div class="form-group">
+                <label for="cantidadasientos">Cantidad Asientos:</label>
+                <input type="txt" class="form-control" id="cantidadasientos" placeholder = "cantidad asientos" required [(ngModel)]="ruta.cantidadasientos" name="cantidadasientos" #cantidadasientos="ngModel">
+            </div>
+            <div class="form-group">
+                <label for="origen">Origen:</label>
+                <input type="txt" class="form-control" id="origen" placeholder = "Origen" required [(ngModel)]="ruta.origen" name="origen" #origen="ngModel">
+            </div>
+            <div class="form-group">
+                <label for="idusuario">Id Usuario:</label>
+                <input type="txt" class="form-control" id="idusuario" placeholder = "Id Usuario" required [(ngModel)]="ruta.idusuario" name="idusuario" #idusuario="ngModel">
+            </div>       
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" [disabled]="!addForm.valid" (click)="onSaveRuta()">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
