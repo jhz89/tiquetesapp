@@ -8,7 +8,7 @@ export class Ruta {
     public placavehiculo:string,
     public valor:string,
     public cantidadasientos:string,
-    public origer:string,
+    public origen:string,
     public idUsuario:string,        
     ){}
 }

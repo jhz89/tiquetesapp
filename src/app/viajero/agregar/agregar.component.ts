@@ -17,8 +17,7 @@ export class AgregarComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.viajero = new Viajero("","","","","");
-    //this.viajeroService.saveViajeros(this.viajero);
+    this.viajero = new Viajero("","","","","");    
   }
 
   onNewViajero(){

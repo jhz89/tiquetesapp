@@ -1,7 +1,6 @@
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
     Crear Ruta
-  </button>
-  
+  </button>  
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -40,13 +39,17 @@
             </div>
             <div class="form-group">
                 <label for="idusuario">Id Usuario:</label>
-                <input type="txt" class="form-control" id="idusuario" placeholder = "Id Usuario" required [(ngModel)]="ruta.idusuario" name="idusuario" #idusuario="ngModel">
+                <input type="txt" class="form-control" id="idusuario" placeholder = "Id Usuario" required [(ngModel)]="ruta.idUsuario" name="idusuario" #idusuario="ngModel">
+            </div>
+            <div class="form-group">
+                <label for="idruta">Id Ruta:</label>
+                <input type="txt" class="form-control" id="idruta" placeholder = "Id Ruta" required [(ngModel)]="ruta.idruta" name="idruta" #idruta="ngModel">
             </div>       
           </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary" [disabled]="!addForm.valid" (click)="onSaveRuta()">Guardar</button>
+          <button type="button" class="btn btn-primary" [disabled]="!addForm.valid" (click)="onSaveRuta()">Guardar</button>      
         </div>
       </div>
     </div>

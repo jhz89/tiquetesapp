@@ -20,8 +20,7 @@ export class AgregarComponent implements OnInit {
   
 
   ngOnInit() {
-    this.ruta = new Ruta("","","","","","","","");
-    //this.viajeroService.saveViajeros(this.viajero);
+    this.ruta = new Ruta("","","","","","","","");    
   }
 
   onSaveRuta(){            
